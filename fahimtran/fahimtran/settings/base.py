@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import secrets
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,8 +24,10 @@ SITE_ID = 1
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Generate and store in environment variable using this: https://humberto.io/blog/tldr-generate-django-secret-key/
-SECRET_KEY = ''
+SECRET_KEY = str(secrets.token_urlsafe())
 
+# Alternative way to read SECRET_KEY - must figure out how to set environment variables in cloud
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False

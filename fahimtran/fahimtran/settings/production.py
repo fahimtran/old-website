@@ -2,9 +2,13 @@ from .base import *
 
 DEBUG = False
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-
-ALLOWED_HOSTS = ['fahimtran.com', 'www.fahimtran.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    'fahimtran.com',
+    'www.fahimtran.com',
+    'pure-faculty-274606.uc.r.appspot.com',
+    '127.0.0.1',
+    'localhost',
+]
 
 # SECURITY: To secure payloads and user information
 CSRF_COOKIE_SECURE = True
